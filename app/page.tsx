@@ -341,6 +341,16 @@ export default function Home() {
           <p>CINEMATIC EXPERIENCE</p>
           <p className="mt-2 opacity-50">Best on Mobile • Try 'demo'</p>
         </div>
+
+        <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs text-neutral-500">
+          <a href="/privacy" className="hover:text-neutral-300 transition-colors">Privacy Policy</a>
+          <span className="text-neutral-700">•</span>
+          <a href="/terms" className="hover:text-neutral-300 transition-colors">Terms & Conditions</a>
+          <span className="text-neutral-700">•</span>
+          <a href="/refunds" className="hover:text-neutral-300 transition-colors">Refunds</a>
+          <span className="text-neutral-700">•</span>
+          <a href="/contact" className="hover:text-neutral-300 transition-colors">Contact Us</a>
+        </div>
       </motion.div>
     </div>
   )
