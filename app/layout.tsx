@@ -110,8 +110,8 @@ export const metadata: Metadata = {
     title: 'GitInsights 2025 - Your Year in Code | GitHub Wrapped',
     description: 'Relive your coding journey with GitInsights 2025. Transform your GitHub contributions into a stunning cinematic experience. Your GitHub Wrapped for 2025!',
     images: ['https://gitinsights18.vercel.app/card.png'],
-    creator: '@pankajkumar_dev',
-    site: '@pankajkumar_dev',
+    creator: '@dharanidharansr',
+    site: '@dharanidharansr',
   },
   appleWebApp: {
     capable: true,
@@ -152,12 +152,12 @@ const jsonLd = {
   offers: {
     '@type': 'Offer',
     price: '0',
-    priceCurrency: 'USD',
+    priceCurrency: 'INR',
   },
   author: {
     '@type': 'Person',
-    name: 'Pankaj Kumar',
-    url: 'https://twitter.com/pankajkumar_dev',
+    name: 'Dharanidharan S R',
+    url: 'https://dharanidharansr.tech',
   },
   screenshot: 'https://gitinsights18.vercel.app/card.png',
   image: 'https://gitinsights18.vercel.app/card.png',

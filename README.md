@@ -137,8 +137,8 @@ Based on your **behavior patterns**, you'll be assigned one of these personas:
 
 ```bash
 # Clone the repository
-git clone https://github.com/PankajKumardev/gitstory-2025.git
-cd gitinsights-2025
+git clone https://github.com/dharanidharansr/GitInsights.git
+cd GitInsights
 
 # Install dependencies
 npm install
@@ -329,6 +329,6 @@ MIT © 2025
 
 *Star ⭐ this repo if you found it useful!*
 
-[🌐 Try GitInsights 2025](https://gitinsights18.vercel.app/) | [🐦 Twitter](https://twitter.com/pankajkumar_dev)
+[🌐 Try GitInsights 2025](https://gitinsights18.vercel.app/)
 
 </div>
