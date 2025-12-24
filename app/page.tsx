@@ -149,7 +149,7 @@ export default function Home() {
         <div className="text-center mb-12">
           <Github size={64} className="mx-auto mb-6 text-white" />
           <h1 className="text-5xl md:text-7xl font-serif italic mb-2 tracking-tight">GitInsights</h1>
-          <p className="text-neutral-400 font-sans tracking-widest text-sm uppercase">Your 2025 Cinematic Wrapped</p>
+          <p className="text-neutral-400 font-sans tracking-widest text-sm uppercase">Your Cinematic Wrapped</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -255,7 +255,7 @@ export default function Home() {
                       <p>
                         Token stays in your browser. Enables: private repos, org repos, 5000 API calls/hr.{' '}
                         <a 
-                          href="https://github.com/settings/tokens/new?scopes=repo,read:org,read:user&description=GitInsights%202025" 
+                          href="https://github.com/settings/tokens/new?scopes=repo,read:org,read:user&description=GitInsights%20"
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="text-hero-blue hover:underline"

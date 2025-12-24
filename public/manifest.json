@@ -1,7 +1,7 @@
 {
-    "name": "GitInsights 2025",
+    "name": "GitInsights",
     "short_name": "GitInsights",
-    "description": "Transform your GitHub contributions into a stunning cinematic experience. Your GitHub Wrapped for 2025!",
+    "description": "Transform your GitHub history into a stunning cinematic experience. Your GitHub Wrapped for all time!",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#000000",

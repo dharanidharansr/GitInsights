@@ -74,7 +74,7 @@ export const MOCK_DATA: GitInsightsData = {
   ],
   topRepo: {
     name: "GitInsights",
-    description: "Transform your GitHub contributions into a stunning cinematic experience. Your GitHub Wrapped for 2025!",
+    description: "Transform your GitHub history into a stunning cinematic experience. Your GitHub Wrapped for all time!",
     stars: 150,
     language: "TypeScript",
     topics: ["nextjs", "github", "visualization", "wrapped"],
@@ -83,7 +83,7 @@ export const MOCK_DATA: GitInsightsData = {
   topRepos: [
     {
       name: "GitInsights",
-      description: "Transform your GitHub contributions into a stunning cinematic experience. Your GitHub Wrapped for 2025!",
+      description: "Transform your GitHub history into a stunning cinematic experience. Your GitHub Wrapped for all time!",
       stars: 150,
       language: "TypeScript",
       topics: ["nextjs", "github", "visualization", "wrapped"],

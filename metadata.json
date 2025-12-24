@@ -1,5 +1,5 @@
 {
-  "name": "GitInsights 2025",
+  "name": "GitInsights",
   "description": "A cinematic, Spotify Wrapped-style experience for GitHub users visualizing their coding year.",
   "requestFramePermissions": []
 }

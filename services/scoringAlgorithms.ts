@@ -10,7 +10,7 @@ export const SCORING_CONFIG = {
   // Language scoring weights
   language: {
     baseWeight: 1,           // Each repo counts as 1
-    recentActivityBonus: 1,  // Extra point for 2025 activity
+    recentActivityBonus: 1,  // Extra point for recent activity
     diversityThreshold: 3,   // Minimum repos to get diversity bonus
     diversityBonus: 0.5,     // Bonus per repo above threshold
   },
@@ -40,7 +40,7 @@ export const SCORING_CONFIG = {
     sizeMaxPoints: 15,
     openIssuesLogMultiplier: 4,
     openIssuesMaxPoints: 8,
-    createdIn2025Bonus: 10,
+    createdRecentlyBonus: 10,
   }
 };
 
@@ -58,12 +58,13 @@ interface LanguageScore {
 /**
  * Calculate language weights from repositories
  * - Excludes forks (they don't represent user's own code)
- * - Weights recent activity higher (2025 repos count more)
+ * - Weights recent activity higher (last year repos count more)
  * - Diversity bonus: languages with 3+ repos get extra weight
  */
 export function calculateLanguageScores(repos: any[]): Map<string, LanguageScore> {
   const langMap = new Map<string, LanguageScore>();
-  const year2025 = new Date('2025-01-01');
+  const oneYearAgo = new Date();
+  oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
   const { baseWeight, recentActivityBonus, diversityThreshold, diversityBonus } = SCORING_CONFIG.language;
   
   // First pass: count repos per language
@@ -76,7 +77,7 @@ export function calculateLanguageScores(repos: any[]): Map<string, LanguageScore
     
     const lang = repo.language;
     const pushedAt = new Date(repo.pushed_at);
-    const isActiveIn2025 = pushedAt >= year2025;
+    const isRecentlyActive = pushedAt >= oneYearAgo;
     
     // Initialize if not exists
     if (!langMap.has(lang)) {
@@ -91,12 +92,12 @@ export function calculateLanguageScores(repos: any[]): Map<string, LanguageScore
     const score = langMap.get(lang)!;
     score.repoCount++;
     
-    if (isActiveIn2025) {
+    if (isRecentlyActive) {
       score.recentCount++;
     }
     
     // Base weight + recent activity bonus
-    score.weight += baseWeight + (isActiveIn2025 ? recentActivityBonus : 0);
+    score.weight += baseWeight + (isRecentlyActive ? recentActivityBonus : 0);
   });
   
   // Second pass: apply diversity bonus for languages with many repos
@@ -132,7 +133,8 @@ export function calculateRepoScore(repo: any): number {
   let score = 0;
   const config = SCORING_CONFIG.repo;
   const now = new Date();
-  const year2025Start = new Date('2025-01-01');
+  const oneYearAgo = new Date();
+  oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
   
   // 1. Stars (logarithmic scale)
   score += Math.min(
@@ -146,9 +148,9 @@ export function calculateRepoScore(repo: any): number {
     config.forks.maxPoints
   );
   
-  // 3. Recency - repos pushed in 2025 get priority
+  // 3. Recency - recently pushed repos get priority
   const pushedAt = new Date(repo.pushed_at);
-  if (pushedAt >= year2025Start) {
+  if (pushedAt >= oneYearAgo) {
     const daysSincePush = Math.max(0, (now.getTime() - pushedAt.getTime()) / (1000 * 60 * 60 * 24));
     score += Math.max(0, config.recency.maxPoints - (daysSincePush / config.recency.decayDays));
   }
@@ -197,10 +199,10 @@ export function calculateRepoScore(repo: any): number {
     );
   }
   
-  // 12. Created in 2025
+  // 12. Recently created
   const createdAt = new Date(repo.created_at);
-  if (createdAt >= year2025Start) {
-    score += config.createdIn2025Bonus;
+  if (createdAt >= oneYearAgo) {
+    score += config.createdRecentlyBonus;
   }
   
   return score;

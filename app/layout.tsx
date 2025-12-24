@@ -144,8 +144,8 @@ export const viewport: Viewport = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  name: 'GitInsights 2025',
-  description: 'Transform your GitHub contributions into a stunning cinematic experience. Your GitHub Wrapped for 2025!',
+  name: 'GitInsights',
+  description: 'Transform your GitHub history into a stunning cinematic experience. Your GitHub Wrapped for all time!',
   url: 'https://gitinsights18.vercel.app',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web',
@@ -169,7 +169,7 @@ const jsonLd = {
     'Cinematic Animations',
     'Downloadable Poster',
   ],
-  keywords: 'GitInsights, GitHub Wrapped, GitHub Wrapped 2025, Git Wrapped, Developer Stats, Code Visualization',
+  keywords: 'GitInsights, GitHub Wrapped, GitHub Wrapped, Git Wrapped, Developer Stats, Code Visualization',
 }
 
 export default function RootLayout({

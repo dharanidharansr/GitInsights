@@ -169,7 +169,7 @@ For enhanced features, add a GitHub Personal Access Token:
 | Org Repos | ❌ | ✅ |
 | Private Contributions | ❌ | ✅ |
 
-[Create a token with correct scopes →](https://github.com/settings/tokens/new?scopes=repo,read:org,read:user&description=GitInsights%202025)
+[Create a token with correct scopes →](https://github.com/settings/tokens/new?scopes=repo,read:org,read:user&description=GitInsights%20)
 
 ---
 
@@ -207,9 +207,9 @@ For enhanced features, add a GitHub Personal Access Token:
 | 2 | `/users/{username}/repos` | Repository list |
 | 3 | `github-contributions-api` | Contribution heatmap |
 | 4 | `/users/{username}/events` | Time-of-day patterns |
-| 5 | `/search/issues?q=type:pr` | PR count for 2025 |
-| 6 | `/search/issues?q=type:issue` | Issue count for 2025 |
-| 7 | `/search/issues?q=reviewed-by:` | Review count for 2025 |
+| 5 | `/search/issues?q=type:pr` | PR count (all-time) |
+| 6 | `/search/issues?q=type:issue` | Issue count (all-time) |
+| 7 | `/search/issues?q=reviewed-by:` | Review count (all-time) |
 
 ### Rate Limits
 
@@ -243,7 +243,7 @@ For enhanced features, add a GitHub Personal Access Token:
 ## 🏗️ Project Structure
 
 ```
-gitinsights-2025/
+gitinsights/
 ├── app/
 │   ├── layout.tsx          # Root layout with SEO metadata & fonts
 │   ├── page.tsx            # Main page (landing + token input)
@@ -305,7 +305,7 @@ Deploy to any platform that supports Next.js:
 
 ## 🔍 SEO Features
 
-GitInsights 2025 is optimized for search engines:
+GitInsights is optimized for search engines:
 
 - ✅ **40+ SEO keywords** including "GitHub Wrapped", "Git Story", etc.
 - ✅ **OpenGraph tags** for Facebook/LinkedIn sharing
@@ -329,6 +329,6 @@ MIT © 2025
 
 *Star ⭐ this repo if you found it useful!*
 
-[🌐 Try GitInsights 2025](https://gitinsights18.vercel.app/)
+[🌐 Try GitInsights](https://gitinsights18.vercel.app/)
 
 </div>
