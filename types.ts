@@ -36,7 +36,7 @@ export interface CommunityStats {
 export interface GitInsightsData {
   username: string;
   avatarUrl: string;
-  year: number;
+  year: number | string;
   totalCommits: number;
   longestStreak: number;
   busiestDay: string; // e.g., "Wednesdays"

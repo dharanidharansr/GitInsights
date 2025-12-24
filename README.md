@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🎬 GitInsights 2025
+# 🎬 GitInsights
 
-### *Your Year in Code — Cinematic Wrapped*
+### *Your Complete Git History — Cinematic Wrapped*
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-15.x-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
@@ -35,7 +35,7 @@
 | 📊 **Live GitHub Data** | Real-time stats fetched from GitHub API — commits, PRs, issues, reviews |
 | 🧬 **Smart Archetypes** | AI-determined coding personas: *Night Owl*, *Weekend Warrior*, *Grid Painter*, and more |
 | 📈 **Velocity Charts** | Animated contribution charts powered by Recharts |
-| 🗓️ **Contribution Grid** | Visual heatmap of your 2025 coding activity |
+| 🗓️ **Contribution Grid** | Visual heatmap of your entire coding history |
 | 🏆 **Top 5 Repositories** | Showcase your best projects with smart ranking |
 | 🎨 **Language Breakdown** | Beautiful visualization of your tech stack (55+ languages!) |
 | 📱 **Mobile-First** | Touch gestures: tap left/right to navigate, hold to pause |
@@ -64,19 +64,19 @@
 ### Smart Repository Scoring
 Projects are now ranked using **12 factors** instead of just stars:
 - ⭐ Stars & Forks (logarithmic scale)
-- 📅 Recent activity in 2025 (time-decay bonus)
+- 📅 Recent activity (time-decay bonus)
 - ✨ Original work (not forks)
 - 📝 Description & Topics
 - 💻 Primary language
 - 📦 Repository size
 - 🐛 Open issues (activity indicator)
-- 🆕 Created in 2025 bonus
+- 🆕 Recently created bonus
 - 👀 Watchers
 - 📦 Archived penalty
 
 ### Smart Language Scoring
 - 🚫 **Excludes forks** (your own code only)
-- 📅 **2025 activity bonus** (recent work counts more)
+- 📅 **Recent activity bonus** (recent work counts more)
 - 🎯 **Diversity bonus** (3+ repos = extra weight)
 
 ### GitHub Token Integration

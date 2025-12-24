@@ -25,7 +25,7 @@ const fetchContributionsWithGraphQL = async (username: string, headers: HeadersI
     const query = `
         query($username: String!) {
             user(login: $username) {
-                contributionsCollection(from: "2025-01-01T00:00:00Z", to: "2025-12-31T23:59:59Z") {
+                contributionsCollection {
                     contributionCalendar {
                         totalContributions
                         weeks {
@@ -82,7 +82,7 @@ const fetchContributionsWithGraphQL = async (username: string, headers: HeadersI
 
         return { 
             contributions,
-            total: { "2025": calendar.totalContributions },
+            total: { "all-time": calendar.totalContributions },
             prCount: collection.totalPullRequestContributions || 0,
             issueCount: collection.totalIssueContributions || 0,
             reviewCount: collection.totalPullRequestReviewContributions || 0
@@ -140,7 +140,7 @@ export const fetchUserStory = async (username: string, token?: string): Promise<
     // Use GraphQL for contributions when token is provided (includes private contributions)
     const contributionsPromise: Promise<ContribData> = token 
         ? fetchContributionsWithGraphQL(username, headers)
-        : fetch(`${CONTRIB_API}/${username}?y=2025`).then(res => res.ok ? res.json() : { contributions: [], total: {} });
+        : fetch(`${CONTRIB_API}/${username}`).then(res => res.ok ? res.json() : { contributions: [], total: {} });
 
     // Use authenticated endpoint for full repo access (includes org repos) when token is provided
     const reposEndpoint = token
@@ -161,12 +161,12 @@ export const fetchUserStory = async (username: string, token?: string): Promise<
         contributionsPromise,
         // Recent events for time-of-day
         fetch(`${GITHUB_API_BASE}/users/${username}/events?per_page=100`, { headers }),
-        // PRs authored in 2025
-        fetch(`${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+created:2025-01-01..2025-12-31&per_page=1`, { headers }),
-        // Issues authored in 2025
-        fetch(`${GITHUB_API_BASE}/search/issues?q=author:${username}+type:issue+created:2025-01-01..2025-12-31&per_page=1`, { headers }),
-        // PR reviews in 2025
-        fetch(`${GITHUB_API_BASE}/search/issues?q=reviewed-by:${username}+-author:${username}+type:pr+created:2025-01-01..2025-12-31&per_page=1`, { headers })
+        // PRs authored (all-time)
+        fetch(`${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr&per_page=1`, { headers }),
+        // Issues authored (all-time)
+        fetch(`${GITHUB_API_BASE}/search/issues?q=author:${username}+type:issue&per_page=1`, { headers }),
+        // PR reviews (all-time)
+        fetch(`${GITHUB_API_BASE}/search/issues?q=reviewed-by:${username}+-author:${username}+type:pr&per_page=1`, { headers })
     ]);
 
     // Process responses
@@ -400,10 +400,15 @@ export const fetchUserStory = async (username: string, token?: string): Promise<
     // F. Final Archetype
     const archetype = calculateArchetype(contributionBreakdown, communityStats, totalCommits, productivity, weekdayStats);
 
+    // Calculate the year span
+    const years = yearData.length > 0 
+      ? `${new Date(yearData[0].date).getFullYear()}-${new Date(yearData[yearData.length - 1].date).getFullYear()}`
+      : new Date().getFullYear().toString();
+
     return {
       username: user.login,
       avatarUrl: user.avatar_url,
-      year: 2025,
+      year: years,
       totalCommits,
       longestStreak: maxStreak,
       busiestDay,

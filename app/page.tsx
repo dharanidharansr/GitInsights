@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { fetchUserStory } from '@/services/githubService'
 import { GitInsightsData } from '@/types'
 import { StoryContainer } from '@/components/StoryContainer'
+import BuyMeCoffeeButton from '@/components/BuyMeCoffeeButton'
 import { Github, Play, Loader2, AlertCircle, Key, ChevronDown, ChevronUp, Lock, RefreshCw, CheckCircle2, XCircle } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -133,6 +134,11 @@ export default function Home() {
        {/* Background Elements */}
        <div className="absolute top-[-20%] left-[-20%] w-[500px] h-[500px] bg-hero-blue/20 rounded-full blur-[120px] pointer-events-none" />
        <div className="absolute bottom-[-20%] right-[-20%] w-[500px] h-[500px] bg-hero-purple/20 rounded-full blur-[120px] pointer-events-none" />
+
+       {/* Buy Me a Coffee Button - Fixed in corner */}
+       <div className="fixed top-6 right-6 z-50">
+         <BuyMeCoffeeButton />
+       </div>
 
       <motion.div 
         initial={{ y: 20, opacity: 0 }}

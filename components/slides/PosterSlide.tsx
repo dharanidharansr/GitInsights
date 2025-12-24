@@ -115,7 +115,7 @@ export const PosterSlide: React.FC<{ data: GitInsightsData }> = ({ data }) => {
             />
             <div className="text-right">
                <h1 className="text-3xl font-serif text-white italic">GitInsights</h1>
-               <div className="text-xl font-mono text-neutral-500 tracking-tighter">2025</div>
+               <div className="text-xl font-mono text-neutral-500 tracking-tighter">{data.year}</div>
             </div>
           </div>
 

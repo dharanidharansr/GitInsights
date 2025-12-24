@@ -30,16 +30,16 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gitinsights18.vercel.app'),
-  title: 'GitInsights 2025 - Your Year in Code | GitHub Wrapped',
-  description: 'Relive your coding journey with GitInsights 2025. Transform your GitHub contributions into a stunning cinematic experience with beautiful animations and personalized insights. Your GitHub Wrapped for 2025!',
+  title: 'GitInsights - Your Git History | GitHub Wrapped',
+  description: 'Relive your entire coding journey with GitInsights. Transform your complete GitHub history into a stunning cinematic experience with beautiful animations and personalized insights. Your GitHub Wrapped for all time!',
   keywords: [
     // Primary keywords
     'GitInsights',
     'Git Story',
     'GitHub Wrapped',
-    'GitHub Wrapped 2025',
+    'GitHub History',
     'Git Wrapped',
-    'Git Wrapped 2025',
+    'All-time GitHub Stats',
     // Feature keywords
     'GitHub Year in Review',
     'GitHub Stats',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     'Developer Wrapped',
     'Coder Wrapped',
     'Code Wrapped',
-    'Coding Year Review',
+    'Coding History Review',
     // Action keywords
     'GitHub Visualization',
     'Code Visualization',
@@ -64,13 +64,13 @@ export const metadata: Metadata = {
     'Commit History',
     'Programming Stats',
     // Long-tail keywords
-    'Year in Code 2025',
-    'Developer Year Review',
+    'Complete Git History',
+    'Developer History Review',
     'GitHub Profile Wrapped',
     'GitHub Contribution Summary',
     'Open Source Stats',
-    'Developer Statistics 2025',
-    'Coding Journey 2025',
+    'Developer Statistics',
+    'Coding Journey',
     'GitHub Cinematic Experience',
   ],
   authors: [{ name: 'GitInsights', url: 'https://gitinsights18.vercel.app' }],
@@ -90,8 +90,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://gitinsights18.vercel.app',
-    title: 'GitInsights 2025 - Your Year in Code | GitHub Wrapped',
-    description: 'Relive your coding journey with GitInsights 2025. Transform your GitHub contributions into a stunning cinematic experience. Your GitHub Wrapped for 2025!',
+    title: 'GitInsights - Your Git History | GitHub Wrapped',
+    description: 'Relive your entire coding journey with GitInsights. Transform your complete GitHub history into a stunning cinematic experience. Your GitHub Wrapped for all time!',
     siteName: 'GitInsights',
     locale: 'en_US',
     images: [
@@ -100,15 +100,15 @@ export const metadata: Metadata = {
         secureUrl: 'https://gitinsights18.vercel.app/card.png',
         width: 1200,
         height: 630,
-        alt: 'GitInsights 2025 - GitHub Wrapped Preview',
+        alt: 'GitInsights - GitHub Wrapped Preview',
         type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GitInsights 2025 - Your Year in Code | GitHub Wrapped',
-    description: 'Relive your coding journey with GitInsights 2025. Transform your GitHub contributions into a stunning cinematic experience. Your GitHub Wrapped for 2025!',
+    title: 'GitInsights - Your Git History | GitHub Wrapped',
+    description: 'Relive your entire coding journey with GitInsights. Transform your complete GitHub history into a stunning cinematic experience. Your GitHub Wrapped for all time!',
     images: ['https://gitinsights18.vercel.app/card.png'],
     creator: '@dharanidharansr',
     site: '@dharanidharansr',
@@ -187,6 +187,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Razorpay Checkout Script */}
+        <script src="https://checkout.razorpay.com/v1/checkout.js" />
       </head>
       <body>
         <Analytics />

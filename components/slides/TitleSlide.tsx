@@ -28,7 +28,7 @@ export const TitleSlide: React.FC<{ data: GitInsightsData }> = ({ data }) => {
         />
         
         <TextReveal 
-          text="The year you wrote history." 
+          text="Your journey in code." 
           className="text-2xl font-sans text-neutral-400 max-w-xs mx-auto" 
           delay={1.5} 
         />

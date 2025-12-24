@@ -39,7 +39,7 @@ export const TopReposSlide: React.FC<{ data: GitInsightsData }> = ({ data }) => 
             className="text-3xl font-serif italic text-white mb-2" 
           />
           <TextReveal 
-            text="The repos that defined your 2025." 
+            text="The repos that defined your journey." 
             className="text-sm text-neutral-400 font-sans"
             delay={0.3}
           />
