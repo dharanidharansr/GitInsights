@@ -29,7 +29,7 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://gitinsights18.vercel.app'),
   title: 'GitInsights 2025 - Your Year in Code | GitHub Wrapped',
   description: 'Relive your coding journey with GitInsights 2025. Transform your GitHub contributions into a stunning cinematic experience with beautiful animations and personalized insights. Your GitHub Wrapped for 2025!',
   keywords: [
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     'Coding Journey 2025',
     'GitHub Cinematic Experience',
   ],
-  authors: [{ name: 'GitInsights', url: 'https://gitstory.pankajk.tech' }],
+  authors: [{ name: 'GitInsights', url: 'https://gitinsights18.vercel.app' }],
   creator: 'GitInsights',
   publisher: 'GitInsights',
   robots: {
@@ -89,15 +89,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    url: 'https://gitstory.pankajk.tech',
+    url: 'https://gitinsights18.vercel.app',
     title: 'GitInsights 2025 - Your Year in Code | GitHub Wrapped',
     description: 'Relive your coding journey with GitInsights 2025. Transform your GitHub contributions into a stunning cinematic experience. Your GitHub Wrapped for 2025!',
     siteName: 'GitInsights',
     locale: 'en_US',
     images: [
       {
-        url: 'https://gitstory.pankajk.tech/card.png',
-        secureUrl: 'https://gitstory.pankajk.tech/card.png',
+        url: 'https://gitinsights18.vercel.app/card.png',
+        secureUrl: 'https://gitinsights18.vercel.app/card.png',
         width: 1200,
         height: 630,
         alt: 'GitInsights 2025 - GitHub Wrapped Preview',
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'GitInsights 2025 - Your Year in Code | GitHub Wrapped',
     description: 'Relive your coding journey with GitInsights 2025. Transform your GitHub contributions into a stunning cinematic experience. Your GitHub Wrapped for 2025!',
-    images: ['https://gitstory.pankajk.tech/card.png'],
+    images: ['https://gitinsights18.vercel.app/card.png'],
     creator: '@pankajkumar_dev',
     site: '@pankajkumar_dev',
   },
@@ -128,7 +128,7 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
   },
   alternates: {
-    canonical: 'https://gitstory.pankajk.tech',
+    canonical: 'https://gitinsights18.vercel.app',
   },
 }
 
@@ -146,7 +146,7 @@ const jsonLd = {
   '@type': 'WebApplication',
   name: 'GitInsights 2025',
   description: 'Transform your GitHub contributions into a stunning cinematic experience. Your GitHub Wrapped for 2025!',
-  url: 'https://gitstory.pankajk.tech',
+  url: 'https://gitinsights18.vercel.app',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web',
   offers: {
@@ -159,8 +159,8 @@ const jsonLd = {
     name: 'Pankaj Kumar',
     url: 'https://twitter.com/pankajkumar_dev',
   },
-  screenshot: 'https://gitstory.pankajk.tech/card.png',
-  image: 'https://gitstory.pankajk.tech/card.png',
+  screenshot: 'https://gitinsights18.vercel.app/card.png',
+  image: 'https://gitinsights18.vercel.app/card.png',
   featureList: [
     'GitHub Year in Review',
     'Contribution Statistics',

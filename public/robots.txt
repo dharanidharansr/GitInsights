@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://gitinsights18.vercel.apps/itemap.xml
 
 # Disallow admin or API routes (if any)
 Disallow: /api/

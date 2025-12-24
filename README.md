@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="https://gitstory.pankajk.tech/">🌐 Live Demo</a> •
+  <a href="https://gitinsights18.vercel.app/">🌐 Live Demo</a> •
   <a href="#-features">✨ Features</a> •
   <a href="#-quick-start">⚡ Quick Start</a> •
   <a href="#-tech-stack">🛠️ Tech Stack</a>
@@ -147,7 +147,7 @@ npm install
 npm run dev
 ```
 
-Open **http://localhost:3000** and enter any GitHub username!
+Open **https://gitinsights18.vercel.app** and enter any GitHub username!
 
 > 💡 **Tip:** Type `demo` to see a full experience with mock data.
 
@@ -329,6 +329,6 @@ MIT © 2025
 
 *Star ⭐ this repo if you found it useful!*
 
-[🌐 Try GitInsights 2025](https://gitstory.pankajk.tech/) | [🐦 Twitter](https://twitter.com/pankajkumar_dev)
+[🌐 Try GitInsights 2025](https://gitinsights18.vercel.app/) | [🐦 Twitter](https://twitter.com/pankajkumar_dev)
 
 </div>
