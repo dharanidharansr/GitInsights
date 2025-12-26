@@ -317,11 +317,6 @@ GitInsights is optimized for search engines:
 
 ---
 
-## 📄 License
-
-MIT © 2025
-
----
 
 <div align="center">
 
