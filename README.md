@@ -2,6 +2,7 @@
 
 # 🎬 GitInsights
 
+
 ### *Your Complete Git History — Cinematic Wrapped*
 
 <p align="center">
