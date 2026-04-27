@@ -6,32 +6,27 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
 
-    # 1️⃣ Checkout code
     - name: Checkout
       uses: actions/checkout@v3
 
-    # 2️⃣ Login to Docker Hub
     - name: Docker Login
       uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    # 3️⃣ Build Docker Image
     - name: Build Image
-      run: docker build -t dharanidharansr/gitinsights:latest .
+      run: docker build --no-cache -t dharanidharansr/gitinsights:latest .
 
-    # 4️⃣ Push Image
     - name: Push Image
       run: docker push dharanidharansr/gitinsights:latest
 
-    # 5️⃣ Deploy to EC2
-    - name: Deploy via SSH
+    - name: Deploy to EC2
       uses: appleboy/ssh-action@v1.0.3
       with:
         host: ${{ secrets.EC2_HOST }}
